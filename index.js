@@ -33,9 +33,7 @@ app.use(express.json())
 app.use(cors())
 
 
-app.get('/', (request, response) => {
-    response.send('<h1>This is phonebook app</h1>')
-})
+app.use(express.static('build'))
 
 app.get('/info', (request, response) => {
     response.send(
